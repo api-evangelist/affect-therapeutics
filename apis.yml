@@ -1,17 +1,32 @@
 aid: affect-therapeutics
 name: Affect Therapeutics
-description: 'Affect Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Affect Therapeutics (operating as "Affect") is a US digital health company founded in
+  2020 that delivers app-based outpatient and intensive outpatient treatment for substance use and
+  mental health disorders. Care is delivered entirely through a mobile application on iOS and Android
+  and combines contingency management, cognitive behavioral therapy, medication-assisted treatment,
+  psychiatry, peer support and care coordination. The program treats alcohol, opioid, methamphetamine,
+  cocaine, cannabis and prescription stimulant use disorders alongside anxiety, depression, OCD, PTSD,
+  bipolar disorder and postpartum depression, and is offered to Medicaid and commercial insurance
+  members across multiple US states. Affect is CARF-accredited and operates as a HIPAA-covered
+  telehealth provider. It publishes no public developer program, API documentation, or machine-readable
+  specification; its software is delivered exclusively as an end-user patient application.'
+image: https://www.affect.com/wp-content/uploads/2024/05/cropped-Affect-logomark-400-px.png
 url: https://raw.githubusercontent.com/api-evangelist/affect-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Healthcare
+- Digital Health
+- Telehealth
+- Mental Health
+- Behavioral Health
+- Substance Use Disorder
+- Addiction Treatment
+- Medicaid
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +35,55 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.affect.com/
+- type: Blog
+  url: https://www.affect.com/blog/
+- type: Support
+  url: https://help.affecttherapeutics.com/
+- type: SignUp
+  url: https://app.affect.com/members/onboarding
+- type: Pricing
+  url: https://www.affect.com/insurance/
+- type: TermsOfService
+  url: https://www.affect.com/terms/
+- type: PrivacyPolicy
+  url: https://www.affect.com/privacy/
+- type: GitHubOrganization
+  url: https://github.com/affect-therapeutics
+- type: Compliance
+  url: https://www.affect.com/data-handling/
+- type: Conformance
+  url: conformance/affect-therapeutics-conformance.yml
+- type: LLMsTxt
+  url: llms/affect-therapeutics-llms.txt
+- type: DomainSecurity
+  url: security/affect-therapeutics-domain-security.yml
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Affect ships only an end-user patient app (iOS/Android) — its one API host,
+    api.affect.com, is a private Django backend on Aptible whose root serves an HTML
+    "Login Required" page with meta robots=noindex, and every contract path there
+    (/openapi.json, /swagger.json, /graphql, /docs, /.well-known/*) returns a real 404
+    confirmed against a control path; there is no developer portal, no partner API, and
+    the company's five public GitHub repos are all forks of third-party projects.
+  evidence:
+  - url: https://api.affect.com/
+    status: 200
+  - url: https://api.affect.com/openapi.json
+    status: 404
+  - url: https://api.affect.com/graphql
+    status: 404
+  - url: https://www.affect.com/developers
+    status: 404
+  - url: https://www.affect.com/.well-known/security.txt
+    status: 404
+  - url: https://www.affect.com/llms.txt
+    status: 200
+  checked: '2026-08-06'

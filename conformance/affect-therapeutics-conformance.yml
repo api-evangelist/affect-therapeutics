@@ -1,0 +1,48 @@
+generated: '2026-08-06'
+method: searched
+source: https://www.affect.com/data-handling/
+docs:
+- https://www.affect.com/data-handling/
+- https://www.affect.com/news/carf-survey/
+- https://www.affect.com/privacy/
+note: >-
+  Affect Therapeutics publishes no API, no OpenAPI/AsyncAPI/GraphQL contract and no developer
+  program, so there are no spec-derived conformance assertions here. The entries below are
+  healthcare regulatory / accreditation claims the company publishes on its own public site.
+standards:
+- id: hipaa
+  conforms: true
+  evidence: >-
+    "In accordance with HIPAA and other health regulations, your data will be stored for 10 more
+    years and then deleted." — https://www.affect.com/data-handling/
+  scope: care-delivery
+- id: carf-accreditation
+  conforms: true
+  evidence: >-
+    "Affect is certified by CARF International" — https://www.affect.com/news/carf-survey/ ;
+    CARF badge linked from the site footer to https://carf.org/
+  scope: behavioral-health-programs
+- id: oauth2
+  conforms: false
+  evidence: no public securitySchemes; no OpenAPI published
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on www.affect.com
+- id: fhir-r4
+  conforms: false
+  evidence: no published FHIR endpoint, capability statement, or HL7/HIE integration surface
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public API contract to assert an error format against
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: https://www.affect.com/.well-known/security.txt returns 404
+x-evidence:
+- url: https://www.affect.com/data-handling/
+  http_status: 200
+- url: https://www.affect.com/news/carf-survey/
+  http_status: 200
+- url: https://www.affect.com/.well-known/security.txt
+  http_status: 404
+- url: https://www.affect.com/.well-known/openid-configuration
+  http_status: 404
