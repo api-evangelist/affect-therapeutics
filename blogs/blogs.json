@@ -1,0 +1,14 @@
+{
+  "repo": "affect-therapeutics",
+  "feeds": [
+    {
+      "source": "https://www.affect.com/",
+      "feed_url": "https://www.affect.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-15T12:22:01Z"
+}
