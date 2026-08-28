@@ -10,6 +10,17 @@ description: 'Affect Therapeutics (operating as "Affect") is a US digital health
   members across multiple US states. Affect is CARF-accredited and operates as a HIPAA-covered
   telehealth provider. It publishes no public developer program, API documentation, or machine-readable
   specification; its software is delivered exclusively as an end-user patient application.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.affect.com/wp-content/uploads/2024/05/cropped-Affect-logomark-400-px.png
 url: https://raw.githubusercontent.com/api-evangelist/affect-therapeutics/refs/heads/main/apis.yml
 x-type: company
